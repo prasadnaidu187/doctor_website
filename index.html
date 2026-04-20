@@ -1,0 +1,1733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physio Premium UI</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f5f7fb;
+  margin:0;
+  padding:0;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#fff;
+  padding:15px 0;
+  box-shadow:0 4px 20px rgba(0,0,0,0.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar-brand{
+  font-weight:700;
+  font-size:22px;
+  color:#0d1b2a !important;
+}
+
+.navbar-brand span{
+  display:block;
+  font-size:12px;
+  color:#777;
+}
+
+.nav-link{
+  color:#0d1b2a !important;
+  font-weight:500;
+  margin:0 10px;
+}
+
+.nav-link.active{
+  color:#ff6b35 !important;
+}
+
+.btn-course{
+  border:2px solid #0d1b2a;
+  border-radius:30px;
+  padding:8px 18px;
+  font-weight:500;
+}
+
+/* NAVBAR MOBILE */
+.navbar-toggler{
+  border:none;
+}
+.navbar-toggler:focus{
+  box-shadow:none;
+}
+
+@media (max-width: 992px){
+  .navbar-nav{
+    text-align:center;
+    margin-top:15px;
+  }
+
+  .nav-link{
+    margin:10px 0;
+  }
+
+  .btn-course{
+    display:block;
+    margin:15px auto;
+    width:80%;
+    text-align:center;
+  }
+}
+
+/* ================= HERO FIXED ================= */
+
+.hero{
+  width:100%;
+}
+
+/* WRAPPER CONTROLS HEIGHT */
+.hero-wrapper{
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* IMAGE */
+.hero-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* TABLET */
+@media(max-width:992px){
+  .hero-wrapper{
+    height:80vh;
+  }
+}
+
+/* MOBILE (FULL IMAGE NO CROP) */
+@media(max-width:768px){
+  .hero-wrapper{
+    height:auto;
+  }
+
+  .hero-img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width:480px){
+  .navbar-brand{
+    font-size:18px;
+  }
+
+  .navbar-brand span{
+    font-size:10px;
+  }
+}
+
+/* ================= LEADERSHIP ================= */
+
+.leadership{
+  padding:100px 0;
+  margin-top:40px;
+  background:linear-gradient(135deg,#f0f4ff,#ffffff);
+}
+
+.leadership-card{
+  background:#fff;
+  border-radius:30px;
+  padding:40px;
+  box-shadow:0 30px 70px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.leader-img{
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.leader-img img{
+  width:100%;
+  transition:0.4s;
+}
+
+.leader-img:hover img{
+  transform:scale(1.05);
+}
+
+/* TEXT */
+.tag{
+  color:#ff6b35;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.heading{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#0d1b2a;
+}
+
+.doctor-name{
+  font-weight:700;
+  margin-top:10px;
+}
+
+.qualification{
+  color:#ff6b35;
+  font-weight:500;
+  margin-bottom:15px;
+}
+
+.desc{
+  color:#555;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+/* BADGES */
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.badges span{
+  background:#0d1b2a;
+  color:#fff;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:13px;
+  transition:0.3s;
+}
+
+.badges span:hover{
+  background:#ff6b35;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .leadership{
+    padding:60px 15px;
+  }
+
+  .leadership-card{
+    padding:25px;
+  }
+
+  .heading{
+    font-size:24px;
+    text-align:center;
+  }
+
+  .tag,
+  .doctor-name,
+  .qualification,
+  .desc{
+    text-align:center;
+  }
+
+  .badges{
+    justify-content:center;
+  }
+}
+
+.about-hospital{
+  padding:100px 0;
+  background:linear-gradient(135deg,#eef2ff,#ffffff);
+}
+
+/* CARD */
+.about-card{
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(20px);
+  border-radius:30px;
+  padding:50px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.08);
+}
+
+/* TEXT */
+.tag{
+  color:#ff6b35;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.heading{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#0d1b2a;
+}
+
+.desc{
+  color:#555;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* VISION BOX */
+.vision-box{
+  background:#fff;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.vision-box h5{
+  margin-top:10px;
+  color:#0d1b2a;
+}
+
+/* FEATURES */
+.features{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.feature-box{
+  display:flex;
+  gap:15px;
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.3s;
+}
+
+.feature-box:hover{
+  transform:translateY(-5px);
+}
+
+.feature-box i{
+  font-size:20px;
+  color:#ff6b35;
+}
+
+.feature-box h6{
+  margin:0;
+  font-weight:600;
+}
+
+.feature-box p{
+  margin:0;
+  font-size:14px;
+  color:#666;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .about-hospital{
+    padding:60px 15px;
+  }
+
+  .about-card{
+    padding:25px;
+  }
+
+  .heading{
+    font-size:24px;
+    text-align:center;
+  }
+
+  .desc,
+  .tag{
+    text-align:center;
+  }
+
+  .vision-box{
+    text-align:center;
+  }
+}
+.feature-box{
+  position:relative;
+  display:flex;
+  gap:15px;
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  transition:0.4s;
+  z-index:1;
+}
+
+/* GRADIENT SWEEP LAYER */
+.feature-box::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg, transparent, #ff6b35, transparent);
+  transition:0.6s;
+  z-index:0;
+}
+
+/* ON HOVER → COLOR PASSES */
+.feature-box:hover::before{
+  left:100%;
+}
+
+/* CONTENT ABOVE EFFECT */
+.feature-box *{
+  position:relative;
+  z-index:2;
+}
+
+/* OPTIONAL HOVER FEEL */
+.feature-box:hover{
+  transform:translateY(-8px) scale(1.02);
+}
+
+.therapy-section{
+  padding:100px 0;
+  background:#0d1b2a;
+  color:#fff;
+  text-align:center;
+  overflow:hidden;
+}
+
+.therapy-title{
+  font-size:36px;
+  margin-bottom:60px;
+  font-weight:700;
+}
+
+/* WRAPPER */
+.therapy-wrapper{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+/* ITEMS (NOT CARDS STYLE) */
+.therapy-item{
+  position:relative;
+  width:260px;
+  padding:30px 20px;
+  border-radius:50px;
+  backdrop-filter:blur(10px);
+  background:rgba(255,255,255,0.05);
+  transition:0.5s;
+  cursor:pointer;
+  transform:translateY(50px);
+  opacity:0;
+}
+
+/* ICON */
+.therapy-item i{
+  font-size:30px;
+  margin-bottom:15px;
+  color:#ff6b35;
+}
+
+/* HOVER EFFECT */
+.therapy-item:hover{
+  transform:translateY(-15px) scale(1.05);
+  background:rgba(255,107,53,0.1);
+  box-shadow:0 20px 50px rgba(255,107,53,0.3);
+}
+
+/* TEXT */
+.therapy-item h4{
+  font-weight:600;
+}
+
+.therapy-item p{
+  font-size:14px;
+  color:#ddd;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .therapy-wrapper{
+    flex-direction:column;
+    align-items:center;
+  }
+}
+
+.college-section{
+  padding:100px 0;
+  background:linear-gradient(135deg,#0d1b2a,#1b263b);
+  color:#fff;
+}
+
+.college-wrapper{
+  display:flex;
+  gap:60px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+/* LEFT */
+.college-left{
+  flex:1;
+}
+
+.college-title{
+  font-size:36px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.college-desc{
+  color:#ccc;
+  margin-bottom:20px;
+}
+
+/* COURSES */
+.course-list span{
+  display:inline-block;
+  margin:5px;
+  padding:8px 15px;
+  border-radius:20px;
+  background:#ff6b35;
+  font-size:14px;
+}
+
+/* FACILITIES */
+.facilities p{
+  margin:5px 0;
+}
+
+/* RIGHT FORM */
+.college-right{
+  flex:1;
+  background:#fff;
+  color:#000;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* FORM */
+#whatsappForm input{
+  width:100%;
+  margin-bottom:15px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+#whatsappForm button{
+  width:100%;
+  padding:12px;
+  border:none;
+  background:#25D366;
+  color:#fff;
+  border-radius:10px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+#whatsappForm button:hover{
+  background:#1ebe5d;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .college-wrapper{
+    flex-direction:column;
+  }
+
+  .college-title{
+    font-size:26px;
+    text-align:center;
+  }
+
+  .college-desc{
+    text-align:center;
+  }
+}
+
+.gallery-section{
+  padding:100px 20px;
+  background:#f4f7fb;
+  text-align:center;
+}
+
+.gallery-title{
+  font-size:38px;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+/* FILTER */
+.gallery-filter button{
+  border:none;
+  padding:10px 20px;
+  margin:5px;
+  border-radius:30px;
+  background:#eaeaea;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.gallery-filter button.active,
+.gallery-filter button:hover{
+  background:#ff6b35;
+  color:#fff;
+}
+
+/* GRID */
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* ITEM */
+.gallery-item{
+  position:relative;
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+.gallery-item img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  transition:0.5s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.1);
+}
+
+/* OVERLAY */
+.overlay{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:12px;
+  background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color:#fff;
+  transform:translateY(100%);
+  transition:0.3s;
+}
+
+.gallery-item:hover .overlay{
+  transform:translateY(0);
+}
+
+/* FILTER HIDE */
+.hide{
+  display:none;
+}
+
+/* VIDEO ICON */
+.gallery-item.video::after{
+  content:"▶";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:28px;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:10px 15px;
+  border-radius:50%;
+}
+
+/* MODAL */
+.video-modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+}
+
+.video-modal.active{
+  display:flex;
+}
+
+.video-content{
+  width:90%;
+  max-width:800px;
+}
+
+.video-content iframe{
+  width:100%;
+  height:450px;
+}
+
+#closeVideo{
+  color:#fff;
+  font-size:30px;
+  cursor:pointer;
+  float:right;
+}
+
+@media(max-width:768px){
+  .video-content iframe{
+    height:250px;
+  }
+}
+
+.testimonial-section{
+  padding:100px 20px;
+  background:linear-gradient(135deg,#eef2ff,#f8fbff);
+  text-align:center;
+}
+
+.testimonial-title{
+  font-size:38px;
+  font-weight:700;
+  margin-bottom:50px;
+}
+
+/* CONTAINER */
+.testimonial-container{
+  overflow:hidden;
+  position:relative;
+}
+
+/* TRACK */
+.testimonial-track{
+  display:flex;
+  gap:20px;
+  transition:transform 0.5s ease;
+}
+
+/* CARD */
+.testimonial-card{
+  min-width:300px;
+  max-width:300px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  transition:0.4s;
+}
+
+.testimonial-card:hover{
+  transform:translateY(-10px);
+}
+
+.testimonial-card p{
+  font-size:15px;
+  color:#333;
+  margin-bottom:15px;
+}
+
+.testimonial-card h4{
+  margin:5px 0;
+}
+
+.testimonial-card span{
+  font-size:13px;
+  color:#777;
+}
+
+/* STARS */
+.stars{
+  color:#ffb400;
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .testimonial-card{
+    min-width:260px;
+  }
+}
+
+/* ===== SECTION ===== */
+.contact-wrapper{
+  display: flex;
+  gap: 30px;
+  padding: 50px;
+  background: #f5f7fa;
+  flex-wrap: wrap;
+}
+
+/* ===== COMMON BOX ===== */
+.box{
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== HEADINGS ===== */
+.box h2{
+  margin-bottom: 20px;
+}
+
+/* ===== FORM ===== */
+form input,
+form textarea{
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+form textarea{
+  height: 100px;
+  resize: none;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  width: 100%;
+  padding: 14px;
+  background: #ff5f1b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  background: #1ebe5d;
+}
+
+/* ===== CONTACT INFO ===== */
+.contact-info p{
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.contact-info i{
+  color: #007bff;
+  margin-right: 10px;
+}
+
+/* ===== MAP ===== */
+.map{
+  margin-top: 20px;
+}
+
+.map iframe{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .contact-wrapper{
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.footer{
+  background: linear-gradient(135deg,#0b1320,#0d1b2a);
+  color:#fff;
+  padding:70px 20px 0;
+}
+
+/* LOGO */
+.footer-logo{
+  font-size:24px;
+  font-weight:700;
+  color:#ff6b35;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* GRID */
+.footer-container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* TEXT */
+.footer-box p{
+  font-size:14px;
+  color:#b8c1cc;
+  line-height:1.7;
+}
+
+/* HEADINGS */
+.footer-box h3{
+  color:#ff6b35;
+  margin-bottom:15px;
+}
+
+/* LINKS */
+.footer-box ul{
+  list-style:none;
+  padding:0;
+}
+
+.footer-box ul li{
+  margin:10px 0;
+}
+
+.footer-box ul li a{
+  color:#b8c1cc;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.footer-box ul li a:hover{
+  color:#ff6b35;
+  padding-left:5px;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+  margin-top:20px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.social-icons a{
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+  font-size:16px;
+  transition:0.4s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* BRAND COLORS */
+.social-icons .fb{background:#1877f2;}
+.social-icons .ig{background:#e4405f;}
+.social-icons .yt{background:#ff0000;}
+.social-icons .li{background:#0077b5;}
+.social-icons .wa{background:#25D366;}
+
+/* HOVER EFFECT */
+.social-icons a:hover{
+  transform:translateY(-5px) scale(1.1);
+  filter:brightness(1.2);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 15px;
+  background:#25D366;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  background:#1ebe5d;
+}
+
+/* BOTTOM */
+.footer-bottom{
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:13px;
+  color:#888;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .footer-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .social-icons{
+    justify-content:center;
+  }
+
+  .footer-logo{
+    justify-content:center;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light">
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<i class="fa-solid fa-user-doctor text-primary me-2"></i>
+PhysioCare
+<span>Rehab. Restore. Rebuild.</span>
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+
+<ul class="navbar-nav mx-auto">
+  <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+  <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+  <li class="nav-item"><a class="nav-link" href="#college">College</a></li>
+  <li class="nav-item"><a class="nav-link" href="#leadership">Team</a></li>
+  <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+  <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+
+<a href="#" class="btn btn-course">
+<i class="fa-solid fa-graduation-cap me-2"></i>Explore Courses
+</a>
+
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-wrapper">
+    <img src="images/hero1.png" class="hero-img" alt="Physiotherapy">
+  </div>
+</section>
+
+<!-- CLINICAL LEADERSHIP -->
+<section class="leadership" id="leadership">
+  <div class="container">
+    <div class="leadership-card">
+
+      <div class="row align-items-center">
+
+        <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+          <div class="leader-img">
+            <img src="images/doctor.png">
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+
+          <p class="tag">CLINICAL LEADERSHIP</p>
+          <h2 class="heading">Faculty Expertise That Shapes Future Clinicians</h2>
+
+          <h4 class="doctor-name">Dr. N. Venu Gopal Reddy</h4>
+          <p class="qualification">
+            MPT, MBA • Senior Physiotherapist • 23+ Years Experience
+          </p>
+
+          <p class="desc">
+            The college is guided by highly experienced professionals, led by Dr. Reddy,
+            a renowned clinical expert specializing in advanced physiotherapy techniques.
+          </p>
+
+          <p class="desc">
+            Certified London Shoulder Clinic Tutor, Manual Therapy & Dry Needling expert,
+            and NDT trainer with global clinical expertise.
+          </p>
+
+          <div class="badges">
+            <span>London Shoulder Clinic Tutor</span>
+            <span>Manual Therapy Expert</span>
+            <span>Dry Needling Certified</span>
+            <span>NDT Trainer</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     ABOUT HOSPITAL SECTION
+========================= -->
+<!-- =========================
+     ABOUT HOSPITAL SECTION
+========================= -->
+<section class="about-hospital" id="about">
+  <div class="container">
+
+    <div class="about-card">
+      <div class="row align-items-center">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+
+          <p class="tag">ABOUT HOSPITAL</p>
+
+          <h2 class="heading">
+            Shradha Hospital & Rehabilitation Center
+          </h2>
+
+          <p class="desc">
+            Shradha Hospital & Rehabilitation Center is dedicated to providing
+            high-quality healthcare and advanced physiotherapy services. We focus
+            on accurate diagnosis, effective treatment, and long-term recovery
+            to help patients regain mobility and lead a pain-free life.
+          </p>
+
+          <!-- Vision & Mission -->
+          <div class="vision-box">
+            <h5>🎯 Our Mission</h5>
+            <p>
+              To deliver comprehensive, patient-centered healthcare with a focus
+              on rehabilitation, recovery, and overall well-being through
+              advanced medical practices.
+            </p>
+
+            <h5>👁️ Our Vision</h5>
+            <p>
+              To become a trusted healthcare institution known for excellence in
+              physiotherapy, innovation in treatment, and compassionate patient care.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT FEATURES -->
+        <div class="col-lg-6">
+
+          <div class="features">
+
+            <div class="feature-box">
+              <i class="fa-solid fa-user-doctor"></i>
+              <div>
+                <h6>Expert Medical Team</h6>
+                <p>Qualified doctors and certified therapists with years of experience</p>
+              </div>
+            </div>
+
+            <div class="feature-box">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <div>
+                <h6>Personalized Treatment</h6>
+                <p>Customized care plans tailored to each patient’s condition</p>
+              </div>
+            </div>
+
+            <div class="feature-box">
+              <i class="fa-solid fa-stethoscope"></i>
+              <div>
+                <h6>Advanced Equipment</h6>
+                <p>Modern medical and rehabilitation technology for effective recovery</p>
+              </div>
+            </div>
+
+            <div class="feature-box">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <div>
+                <h6>Affordable Healthcare</h6>
+                <p>Quality treatment at reasonable and accessible pricing</p>
+              </div>
+            </div>
+
+            <div class="feature-box">
+              <i class="fa-solid fa-chart-line"></i>
+              <div>
+                <h6>Proven Results</h6>
+                <p>High patient satisfaction with successful recovery outcomes</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="therapy-section" id="services">
+  <div class="container">
+
+    <h2 class="therapy-title">Therapy Programs</h2>
+
+    <div class="therapy-wrapper">
+
+      <div class="therapy-item">
+        <i class="fa-solid fa-bone"></i>
+        <h4>Post-Surgery Rehab</h4>
+        <p>Recovery programs designed to restore strength and mobility after surgery.</p>
+      </div>
+
+      <div class="therapy-item">
+        <i class="fa-solid fa-baby"></i>
+        <h4>Pediatric Physio</h4>
+        <p>Specialized care for children to improve movement and development.</p>
+      </div>
+
+      <div class="therapy-item">
+        <i class="fa-solid fa-person-cane"></i>
+        <h4>Geriatric Care</h4>
+        <p>Focused therapy for elderly patients to enhance balance and independence.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     PHYSIOTHERAPY COLLEGE
+========================= -->
+<section class="college-section" id="college">
+  <div class="container">
+
+    <div class="college-wrapper">
+
+      <!-- LEFT INFO -->
+      <div class="college-left reveal">
+
+        <h2 class="college-title">
+          Shradha College of Physiotherapy
+        </h2>
+
+        <p class="college-desc">
+          Build your career in physiotherapy with expert guidance, hands-on clinical
+          training, and modern infrastructure designed to shape future healthcare professionals.
+        </p>
+
+        <!-- COURSES -->
+        <div class="course-list">
+          <span>BPT (Bachelor of Physiotherapy)</span>
+          <span>MPT (Master of Physiotherapy)</span>
+          <span>Diploma Courses</span>
+        </div>
+
+        <!-- FACILITIES -->
+        <div class="facilities">
+          <p>✔ Advanced Labs</p>
+          <p>✔ Clinical Training</p>
+          <p>✔ In-House Practice</p>
+        </div>
+
+        <!-- ADMISSION INFO -->
+        <div class="admission">
+          <p><strong>Eligibility:</strong> 12th Science (BiPC)</p>
+          <p><strong>Duration:</strong> 4.5 Years (BPT)</p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="college-right reveal">
+
+        <h4>Apply Now</h4>
+
+        <form id="whatsappForm">
+
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="tel" id="phone" placeholder="Phone Number" required>
+          <input type="text" id="course" placeholder="Course Interested" required>
+
+          <button type="submit">
+            <i class="fa-brands fa-whatsapp"></i> Apply via WhatsApp
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery">
+
+  <h2 class="gallery-title">Healing in Action</h2>
+
+  <!-- FILTER -->
+  <div class="gallery-filter">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="treatment">Treatment</button>
+    <button data-filter="exercise">Exercise</button>
+    <button data-filter="hospital">Hospital</button>
+    <button data-filter="recovery">Recovery</button>
+    <button data-filter="video">Videos</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="gallery-grid">
+
+    <!-- TREATMENT -->
+    <div class="gallery-item" data-category="treatment">
+      <img src="https://plus.unsplash.com/premium_photo-1661751462825-1b7f1a93d641?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWR2YW5jZWQlMjBtYW51YWwlMjB0aGVyYXB5JTIwZm9yJTIwc2hvdWxkZXIlMjBwYWluJTIwcmVsaWVmfGVufDB8fDB8fHww">
+      <div class="overlay">Advanced manual therapy for shoulder pain relief</div>
+    </div>
+
+    <div class="gallery-item" data-category="treatment">
+      <img src="https://media.istockphoto.com/id/2203491478/photo/unrecognizable-patient-receiving-electrical-muscle-stimulation-therapy-on-leg.webp?a=1&b=1&s=612x612&w=0&k=20&c=8hjnVMBp9cFzNP_O3ZJCF56dKCK6QjWo0cGt4iYABgI=">
+      <div class="overlay">Electrotherapy treatment for muscle recovery</div>
+    </div>
+
+    <!-- EXERCISE -->
+    <div class="gallery-item" data-category="exercise">
+      <img src="https://plus.unsplash.com/premium_photo-1726226540104-b8d7206a453c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U3RyZW5ndGgtYnVpbGRpbmclMjBwaHlzaW90aGVyYXB5JTIwZXhlcmNpc2VzfGVufDB8fDB8fHww">
+      <div class="overlay">Strength-building physiotherapy exercises</div>
+    </div>
+
+    <div class="gallery-item" data-category="exercise">
+      <img src="https://media.istockphoto.com/id/2222535919/photo/group-meditation-session-at-community-center-promoting-mindfulness-and-relaxation.webp?a=1&b=1&s=612x612&w=0&k=20&c=17J3qhsFuwQuQFRowogq2f6JdzsWe_ODhG9nGNl__kA=">
+      <div class="overlay">Posture correction guided session</div>
+    </div>
+
+    <!-- HOSPITAL -->
+    <div class="gallery-item" data-category="hospital">
+      <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=1200">
+      <div class="overlay">Modern and hygienic treatment facility</div>
+    </div>
+
+    <div class="gallery-item" data-category="hospital">
+      <img src="https://media.istockphoto.com/id/1356562127/photo/senior-man-walking-with-an-exoskeleton-while-doing-physiotherapy.webp?a=1&b=1&s=612x612&w=0&k=20&c=CmdI8IF3h35wWjPb92ya5bERTuksqifnBtGTtjqaQ64=">
+      <div class="overlay">Advanced physiotherapy equipment</div>
+    </div>
+
+    <!-- RECOVERY -->
+    <div class="gallery-item" data-category="recovery">
+      <img src="https://images.unsplash.com/photo-1519965501869-1954ff18db96?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEZyb20lMjBwYWluJTIwdG8lMjByZWNvdmVyeSUyMGluJTIwNiUyMHdlZWtzJTIwc21pbGV8ZW58MHx8MHx8fDA%3D">
+      <div class="overlay">From pain to recovery in 6 weeks</div>
+    </div>
+
+    <div class="gallery-item" data-category="recovery">
+      <img src="https://plus.unsplash.com/premium_photo-1681996663607-d47cf11205cb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEltcHJvdmVkJTIwbW9iaWxpdHklMjBhZnRlciUyMHRoZXJhcHklMjBzZXNzaW9uc3xlbnwwfHwwfHx8MA%3D%3D">
+      <div class="overlay">Improved mobility after therapy sessions</div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="gallery-item video" data-category="video"
+         data-video="https://www.youtube.com/watch?v=wfhXnLILqdk&pp=ygUScGh5c2lvdGhlcmFweSBkZW1v">
+      <img src="https://images.unsplash.com/photo-1717500252677-df7b2f197ca4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEltcHJvdmVkJTIwbW9iaWxpdHklMjBhZnRlciUyMHRoZXJhcHklMjBzZXNzaW9uc3xlbnwwfHwwfHx8MA%3D%3D">
+      <div class="overlay">▶ Physiotherapy exercise demo</div>
+    </div>
+
+    <div class="gallery-item video" data-category="video"
+         data-video="https://www.youtube.com/embed/2pLT-olgUJs">
+      <img src="https://plus.unsplash.com/premium_photo-1682126245045-6cf94d75d2ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmFjayUyMHBhaW4lMjB0cmVhdG1lbnQlMjBleHBsYWluZWR8ZW58MHx8MHx8fDA%3D">
+      <div class="overlay">▶ Back pain treatment explained</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-content">
+    <span id="closeVideo">&times;</span>
+    <iframe id="videoFrame" src="" allowfullscreen></iframe>
+  </div>
+</div>
+
+<section class="testimonial-section" id="testimonials">
+
+  <h2 class="testimonial-title">What Our Patients Say</h2>
+
+  <div class="testimonial-container">
+
+    <div class="testimonial-track">
+
+      <!-- TESTIMONIAL 1 -->
+      <div class="testimonial-card">
+        <p>"I recovered from severe back pain within 2 months. Excellent care and guidance!"</p>
+        <h4>Ravi Kumar</h4>
+        <span>Nellore</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- TESTIMONIAL 2 -->
+      <div class="testimonial-card">
+        <p>"After my knee surgery, I regained walking faster with their therapy."</p>
+        <h4>Sneha Reddy</h4>
+        <span>Andhra Pradesh</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- TESTIMONIAL 3 -->
+      <div class="testimonial-card">
+        <p>"Best physiotherapy center. Friendly staff and very professional treatment."</p>
+        <h4>Mahesh Babu</h4>
+        <span>Nellore</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- TESTIMONIAL 4 -->
+      <div class="testimonial-card">
+        <p>"My neck pain reduced completely after posture correction sessions."</p>
+        <h4>Anitha</h4>
+        <span>Chennai</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <!-- TESTIMONIAL 5 -->
+      <div class="testimonial-card">
+        <p>"Very effective treatment. I saw improvement within a few sessions."</p>
+        <h4>Suresh</h4>
+        <span>Tirupati</span>
+        <div class="stars">★★★★★</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="contact-wrapper" id="contact">
+  <!-- LEFT: APPOINTMENT -->
+  <div class="box">
+    <h2>Book Appointment</h2>
+
+    <form id="appointmentForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <textarea name="problem" placeholder="Describe Your Problem" required></textarea>
+      <input type="date" name="date" required>
+
+      <button type="submit" class="btn">
+        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+      </button>
+    </form>
+  </div>
+
+  <!-- RIGHT: CONTACT -->
+  <div class="box">
+    <h2>Contact Us</h2>
+
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Shraddha Hospital, Nellore, Andhra Pradesh</p>
+      <p><i class="fas fa-phone"></i> +91 7075901216</p>
+      <p><i class="fas fa-envelope"></i> info@shraddhahealth.com</p>
+      <p><i class="fas fa-clock"></i> Mon - Sat: 9 AM - 7 PM</p>
+    </div>
+
+    <!-- GOOGLE MAP -->
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps?q=Nellore&output=embed">
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- COLUMN 1: BRAND -->
+    <div class="footer-box brand-box">
+
+      <h2 class="footer-logo">
+        <i class="fa-solid fa-user-doctor"></i>
+        PhysioCare
+      </h2>
+
+      <p>
+        Rehab. Restore. Rebuild.  
+        Advanced physiotherapy care with expert doctors, modern rehab technology,
+        and personalized recovery programs.
+      </p>
+
+      <div class="social-icons">
+
+        <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="ig"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="li"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="wa"><i class="fab fa-whatsapp"></i></a>
+
+      </div>
+
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">College</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="footer-box">
+      <h3>Our Services</h3>
+      <ul>
+        <li>Sports Physiotherapy</li>
+        <li>Post Surgery Rehab</li>
+        <li>Stroke Rehabilitation</li>
+        <li>Pediatric Therapy</li>
+        <li>Geriatric Care</li>
+        <li>Back Pain Treatment</li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="footer-box">
+      <h3>Contact Info</h3>
+
+      <p><i class="fas fa-map-marker-alt"></i> Nellore, Andhra Pradesh</p>
+      <p><i class="fas fa-phone"></i> +91 7075901216</p>
+      <p><i class="fas fa-envelope"></i> info@physiocare.com</p>
+      <p><i class="fas fa-clock"></i> Mon - Sat: 9 AM - 7 PM</p>
+
+      <a class="whatsapp-btn"
+         href="https://wa.me/917075901216?text=Hello%20I%20want%20appointment"
+         target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 PhysioCare | Designed for Modern Healthcare Excellence</p>
+  </div>
+
+</footer>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll(".reveal");
+
+  function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+
+    elements.forEach((el, index) => {
+      const elementTop = el.getBoundingClientRect().top;
+
+      if (elementTop < windowHeight - 100) {
+        setTimeout(() => {
+          el.classList.add("active");
+        }, index * 150); // stagger effect
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // trigger on load
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const items = document.querySelectorAll(".therapy-item");
+
+  function animateItems(){
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.style.opacity = "1";
+        item.style.transform = "translateY(0)";
+      }, index * 300);
+    });
+  }
+
+  // trigger when section visible
+  const section = document.querySelector(".therapy-section");
+
+  const observer = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting){
+      animateItems();
+    }
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+
+});
+
+document.getElementById("whatsappForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let course = document.getElementById("course").value;
+
+  let message = `Hello, I want to apply for Physiotherapy Course.%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Course: ${course}`;
+
+  let whatsappNumber = "91XXXXXXXXXX"; // 🔥 PUT YOUR NUMBER HERE
+
+  window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+});
+
+// FILTER
+const buttons = document.querySelectorAll(".gallery-filter button");
+const items = document.querySelectorAll(".gallery-item");
+
+buttons.forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    buttons.forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+
+    let filter = btn.getAttribute("data-filter");
+
+    items.forEach(item=>{
+      if(filter === "all" || item.dataset.category === filter){
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+  });
+});
+
+// VIDEO
+const videoItems = document.querySelectorAll(".video");
+const modal = document.getElementById("videoModal");
+const frame = document.getElementById("videoFrame");
+
+videoItems.forEach(item=>{
+  item.addEventListener("click",()=>{
+    frame.src = item.dataset.video + "?autoplay=1";
+    modal.classList.add("active");
+  });
+});
+
+document.getElementById("closeVideo").onclick = ()=>{
+  modal.classList.remove("active");
+  frame.src="";
+};
+
+modal.onclick = (e)=>{
+  if(e.target === modal){
+    modal.classList.remove("active");
+    frame.src="";
+  }
+};
+
+
+const track = document.querySelector(".testimonial-track");
+let index = 0;
+
+function slideTestimonials(){
+  const cards = document.querySelectorAll(".testimonial-card");
+  const cardWidth = cards[0].offsetWidth + 20;
+
+  index++;
+
+  if(index >= cards.length){
+    index = 0;
+  }
+
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+// AUTO SLIDE EVERY 3 SEC
+setInterval(slideTestimonials, 3000);
+
+
+
+document.getElementById("appointmentForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let form = e.target;
+
+  let name = form.name.value.trim();
+  let phone = form.phone.value.trim();
+  let problem = form.problem.value.trim();
+  let date = form.date.value;
+
+  if(!name || !phone || !problem || !date){
+    alert("Please fill all fields");
+    return;
+  }
+
+  let message = `Appointment Request:
+Name: ${name}
+Phone: ${phone}
+Problem: ${problem}
+Date: ${date}`;
+
+  // 🔥 Replace with your number
+  let whatsappNumber = "917075901216";
+
+  let url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+});
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop - 150) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>
